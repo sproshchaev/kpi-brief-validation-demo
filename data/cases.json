@@ -1,0 +1,58 @@
+[
+  {
+    "name": "correct",
+    "numbers": ["20", "4.00"],
+    "items": [
+      {"kind": "observation", "metric": "orders", "unit": "orders", "fact_id": "2026-11-16/web/orders"},
+      {"kind": "observation", "metric": "conversion", "unit": "percent", "fact_id": "2026-11-16/web/conversion"}
+    ]
+  },
+  {
+    "name": "same value, wrong week",
+    "numbers": ["20", "4.00"],
+    "items": [
+      {"kind": "observation", "metric": "orders", "unit": "orders", "fact_id": "2026-11-09/web/orders"},
+      {"kind": "observation", "metric": "conversion", "unit": "percent", "fact_id": "2026-11-16/web/conversion"}
+    ]
+  },
+  {
+    "name": "same value, wrong channel",
+    "numbers": ["20", "4.00"],
+    "items": [
+      {"kind": "observation", "metric": "orders", "unit": "orders", "fact_id": "2026-11-16/app/orders"},
+      {"kind": "observation", "metric": "conversion", "unit": "percent", "fact_id": "2026-11-16/web/conversion"}
+    ]
+  },
+  {
+    "name": "wrong unit",
+    "numbers": ["20", "4.00"],
+    "items": [
+      {"kind": "observation", "metric": "orders", "unit": "orders", "fact_id": "2026-11-16/web/orders"},
+      {"kind": "observation", "metric": "conversion", "unit": "percentage_points", "fact_id": "2026-11-16/web/conversion"}
+    ]
+  },
+  {
+    "name": "missing KPI",
+    "numbers": ["20"],
+    "items": [
+      {"kind": "observation", "metric": "orders", "unit": "orders", "fact_id": "2026-11-16/web/orders"}
+    ]
+  },
+  {
+    "name": "unsupported cause",
+    "numbers": ["20", "4.00"],
+    "items": [
+      {"kind": "observation", "metric": "orders", "unit": "orders", "fact_id": "2026-11-16/web/orders"},
+      {"kind": "observation", "metric": "conversion", "unit": "percent", "fact_id": "2026-11-16/web/conversion"},
+      {"kind": "cause", "metric": "conversion", "unit": "percent", "fact_id": "2026-11-16/web/conversion"}
+    ]
+  },
+  {
+    "name": "unknown figure",
+    "numbers": ["20", "9.99"],
+    "items": [
+      {"kind": "observation", "metric": "orders", "unit": "orders", "fact_id": "2026-11-16/web/orders"},
+      {"kind": "observation", "metric": "conversion", "unit": "percent", "fact_id": "invented/conversion"}
+    ]
+  }
+]

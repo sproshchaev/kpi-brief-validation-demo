@@ -1,0 +1,20 @@
+source facts
+2026-11-09/app/orders | 15 | orders
+2026-11-09/app/conversion | 7.50 | percent
+2026-11-09/web/orders | 20 | orders
+2026-11-09/web/conversion | 5.00 | percent
+2026-11-16/app/orders | 20 | orders
+2026-11-16/app/conversion | 8.00 | percent
+2026-11-16/web/orders | 20 | orders
+2026-11-16/web/conversion | 4.00 | percent
+case | values only | scoped facts
+correct | accept | accept
+Неделя с 2026-11-16, канал web
+- Оплаченные заказы: 20 заказов [2026-11-16/web/orders]
+- Конверсия: 4,00 % [2026-11-16/web/conversion]
+same value, wrong week | accept | reject (wrong scope)
+same value, wrong channel | accept | reject (wrong scope)
+wrong unit | accept | reject (wrong metric or unit)
+missing KPI | accept | reject (missing required metric)
+unsupported cause | accept | reject (unsupported claim)
+unknown figure | reject | reject (unknown fact)
